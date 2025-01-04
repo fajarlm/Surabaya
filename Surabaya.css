@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+#content{
+    display: flex;
+    flex: 5;
+    flex-flow: column nowrap;
+    gap: 1em 2 rem;
+}
+.judul {
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+    font-size: 9vw !important;
+    font-family: 'Roboto' !important;
+}
+
+.header {
+    text-align: center;
+    padding: 45px 10px;
+    background-image: url('picture/header.jpg');
+
+}
+/* Burger menu icon styling */
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    cursor: pointer;
+    gap: 5px;
+    margin: 20px;
+}
+
+.burger-menu span {
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    
+
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background-color: #78828b;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.nav-menu ul{
+    list-style-type: none;
+}
+.nav-menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Show menu when active */
+.nav-menu.active {
+    display: flex;
+}
+
+/* Burger active state */
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+nav a:hover{
+    font-weight: bold;
+    transform: 0,2;
+    padding: 10px;
+    background: rgba(42, 39, 85, 0.8);
+    color: #ffffff;
+    border-radius: 999px;
+    
+}
+
+/* Slider styling */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider-image {
+    width: 300px;
+    display: none;
+    height: auto;
+    transition: opacity 1s ease-in-out;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+.card{
+    box-shadow: 2px 9px 8px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #003366;
+}
+h3{
+    font-size: 1.4rem;
+    color: #4CAF50;
+}
+
+.img{
+   width: 200px;
+}
+main{
+    padding: 20px;
+    display: flex;
+    gap: 1.5em;
+}
+.budaya{
+    padding-left: 5%;
+    color: #000000; 
+}
+footer{
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    height: 20%;
+    margin-top: 20px;
+    background-image: url('picture/Julukan_kota_Surabaya.jpg');
+    background-size: 700px;
+}
+.Informasi{
+    text-align: center;
+}
+aside{
+    /* justify-content: left; */
+}
+table{
+    border-collapse: collapse;
+    padding: 10px;
+}
+@media screen and (max-width: 1200px) {
+    .header h1 {
+        font-size: 4vw;
+    }
+    main {
+        flex-direction: column;
+    }
+    .img {
+        width: 150px;
+    }
+}
+
+/* 
+
+    .header {
+        padding: 40px 10px;
+    }
+    .judul{
+        font-size: 6vw;
+    }
+    .nav-menu{
+        display: none;
+
+    }
+    main {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 4vw;
+    }
+    h3 {
+        font-size: 3vw;
+    }
+    .slider {
+        max-width: 100%;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+    .burger-menu {
+        display: flex; /* Tampilkan ikon burger di layar kecil */
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ffffff; /* Latar belakang putih agar teks terlihat */
+        width: 100px; /* Ukuran menu yang sesuai untuk layar kecil */
+        border-radius: 10px;
+        display: none; /* Sembunyikan menu awalnya */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Tampilkan menu saat ikon burger diklik */
+        flex-direction: row;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    /* Teks dan font agar lebih kecil dan sesuai dengan layar kecil */
+    .nav-menu a {
+        font-size: 16px;
+        color: #333;
+    }
+}
